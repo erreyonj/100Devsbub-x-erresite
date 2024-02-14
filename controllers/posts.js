@@ -40,7 +40,7 @@ module.exports = {
         user: req.user.id,
         //Route Following Exercise:
         // From profile.ejs --> form submission action starts events that create a post, Step1: server.js is listening, Step2: server.js sends form data to posts.js Route, Step3: posts.js Route runs createPost method to try and upload file using form data (type=file)...
-        // Will Step3 work with no photo? // It will not since there was no upload when posts.js Route sent data to posts.js Controller which uses Post.js Model which has a schema where image property is required. Since Cloudinary never received upload we continue to await Post.create here.
+        // Will Step3 work with no photo? // It will not since there was no upload when posts.js Route sent data to posts.js Controller which uses Post.js Model which has a schema where image property is required. Since Cloudinary never received upload we continue to await Post.create here. last test for pushing practice tonight
       });
       console.log("Post has been added!");
       res.redirect("/profile");
